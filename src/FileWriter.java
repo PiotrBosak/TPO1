@@ -31,7 +31,7 @@ public class FileWriter {
             int check = intBuffer.get();
             if(check == LAST_WRITE) {
                 sleep();
-                System.out.println("reading hasnt finished yet");
+                System.out.println("reading hasn't finished yet");
             }
             else if(check == LAST_READ){
                 firstValue = random.nextInt();
@@ -40,7 +40,6 @@ public class FileWriter {
                 intBuffer.put(LAST_WRITE);
                 intBuffer.put(firstValue);
                 intBuffer.put(secondValue);
-                intBuffer.rewind();
                 sleep();
             }
             else return;
